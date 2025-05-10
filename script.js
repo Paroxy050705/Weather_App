@@ -37,27 +37,26 @@ async function checkWeather(city){
 
     wind_speed.innerHTML=`${weather_data.wind.speed}Km/H`;
 
+    switch (weather_data.weather[0].main) {
+  case 'Clouds':
+    weather_img.src = "./images/cloud.png";
+    break;
+  case 'Clear':
+    weather_img.src = "./images/clear.png";
+    break;
+  case 'Rain':
+    weather_img.src = "./images/rain.png";
+    break;
+  case 'Mist':
+    weather_img.src = "./images/mist.png";
+    break;
+  case 'Snow':
+    weather_img.src = "./images/snow.png";
+    break;
+  default:
+    weather_img.src = "./images/default.png"; // Optional: handle unexpected cases
+}
 
-    switch(weather_data.weather[0].main)
-    {
-        case 'Clouds':
-            weather_img.src="images/cloud.png";
-            break;
-        case 'Clear':
-            weather_img.src="images/clear.png";
-            break;
-        case 'Rain':
-            weather_img.src="images/rain.png";
-            break;  
-        case 'Mist':
-            weather_img.src="images/mist.png";
-            break;    
-        case 'Snow':
-            weather_img.src="images/snow.png";
-            break;
-
-
-    }
 }
 searchbtn.addEventListener('click',()=>{
     checkWeather(inputBox.value);
