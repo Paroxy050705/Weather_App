@@ -59,5 +59,5 @@ It uses JavaScript to make API calls and updates the UI dynamically.
 - Make sure your API key is **enabled and has access** to current weather endpoints.
 
 ### Example URL (if using OpenWeatherMap):
-api_key="
+api_key="42a13939ccf137a802bcc071fa349dc3"
 https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}
